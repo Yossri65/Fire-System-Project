@@ -56,6 +56,7 @@ int main(void) {
                     ret = lcd_send_command(&lcd1 , LCD_MOVE_CURSOR_LEFT_SHIFT);
                 }
             if(value_PRESSED == '+'){
+                __delay_ms(300);
                     value_PRESSED = NOT_PRESSED;
                     pass_status = false;
                     ret = Dc_Motor_Stop(&dc_motor1);
@@ -65,6 +66,7 @@ int main(void) {
                     break;
                 }
             else if('1' == value_PRESSED && counter_set_new_read <3){
+                __delay_ms(500);
                 /*store counter_set_new in eeprom in 0x0010 to know how many time u set a new password */
                 ret = EEPROM_Data_WriteByte(0X0010 ,counter_set_new);
                 counter_set_new++;
@@ -81,7 +83,7 @@ int main(void) {
                 ret = EEPROM_Data_WriteByte(eeprom_address ,first_digit);
 
                 eeprom_address++;
-                __delay_ms(200);
+                __delay_ms(300);
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&Second_digit);
@@ -90,7 +92,7 @@ int main(void) {
                 ret = EEPROM_Data_WriteByte(eeprom_address ,Second_digit);
 
                 eeprom_address++;
-                __delay_ms(200);
+                __delay_ms(300);
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&third_digit);
@@ -106,29 +108,30 @@ int main(void) {
             }
             else if('2' == value_PRESSED)
             {
+                __delay_ms(300);
                 /*set exist password*/
                 ret = lcd_send_command(&lcd1 , LCD_CLEAR);
                 ret = lcd_send_ATpos_string_data(&lcd1 , 1 , 1 , "2:Enter Exist Pass");
-                __delay_ms(300);
+                __delay_ms(400);
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&first_digit);
                 }while(first_digit == NOT_PRESSED );
                 ret = lcd_send_ATpos_char_data(&lcd1 , 2 , 1 , first_digit);
-                __delay_ms(200);
+                __delay_ms(400);
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&Second_digit);
                 }while(Second_digit == NOT_PRESSED );
                 
                 ret = lcd_send_ATpos_char_data(&lcd1 , 2 , 2 , Second_digit);
-                __delay_ms(200);
+                __delay_ms(400);
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&third_digit);
                 }while(third_digit == NOT_PRESSED );
                 ret = lcd_send_ATpos_char_data(&lcd1 , 2 , 3 , third_digit);
-                __delay_ms(200);
+                __delay_ms(400);
                 
                 /*take pass from eeprom to check if the pass is wrong or true*/
                 eeprom_address = 0;

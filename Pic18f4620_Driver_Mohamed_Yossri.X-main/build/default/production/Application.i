@@ -5598,6 +5598,7 @@ int main(void) {
                     ret = lcd_send_command(&lcd1 , 0X10);
                 }
             if(value_PRESSED == '+'){
+                _delay((unsigned long)((300)*(8000000UL/4000.0)));
                     value_PRESSED = 0;
                     pass_status = 0;
                     ret = Dc_Motor_Stop(&dc_motor1);
@@ -5607,6 +5608,7 @@ int main(void) {
                     break;
                 }
             else if('1' == value_PRESSED && counter_set_new_read <3){
+                _delay((unsigned long)((500)*(8000000UL/4000.0)));
 
                 ret = EEPROM_Data_WriteByte(0X0010 ,counter_set_new);
                 counter_set_new++;
@@ -5623,7 +5625,7 @@ int main(void) {
                 ret = EEPROM_Data_WriteByte(eeprom_address ,first_digit);
 
                 eeprom_address++;
-                _delay((unsigned long)((200)*(8000000UL/4000.0)));
+                _delay((unsigned long)((300)*(8000000UL/4000.0)));
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&Second_digit);
@@ -5632,7 +5634,7 @@ int main(void) {
                 ret = EEPROM_Data_WriteByte(eeprom_address ,Second_digit);
 
                 eeprom_address++;
-                _delay((unsigned long)((200)*(8000000UL/4000.0)));
+                _delay((unsigned long)((300)*(8000000UL/4000.0)));
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&third_digit);
@@ -5648,29 +5650,30 @@ int main(void) {
             }
             else if('2' == value_PRESSED)
             {
+                _delay((unsigned long)((300)*(8000000UL/4000.0)));
 
                 ret = lcd_send_command(&lcd1 , 0x01);
                 ret = lcd_send_ATpos_string_data(&lcd1 , 1 , 1 , "2:Enter Exist Pass");
-                _delay((unsigned long)((300)*(8000000UL/4000.0)));
+                _delay((unsigned long)((400)*(8000000UL/4000.0)));
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&first_digit);
                 }while(first_digit == 0 );
                 ret = lcd_send_ATpos_char_data(&lcd1 , 2 , 1 , first_digit);
-                _delay((unsigned long)((200)*(8000000UL/4000.0)));
+                _delay((unsigned long)((400)*(8000000UL/4000.0)));
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&Second_digit);
                 }while(Second_digit == 0 );
 
                 ret = lcd_send_ATpos_char_data(&lcd1 , 2 , 2 , Second_digit);
-                _delay((unsigned long)((200)*(8000000UL/4000.0)));
+                _delay((unsigned long)((400)*(8000000UL/4000.0)));
                 do
                 {
                     ret = Key_Pad_Get_Value(&key_pad1 ,&third_digit);
                 }while(third_digit == 0 );
                 ret = lcd_send_ATpos_char_data(&lcd1 , 2 , 3 , third_digit);
-                _delay((unsigned long)((200)*(8000000UL/4000.0)));
+                _delay((unsigned long)((400)*(8000000UL/4000.0)));
 
 
                 eeprom_address = 0;
