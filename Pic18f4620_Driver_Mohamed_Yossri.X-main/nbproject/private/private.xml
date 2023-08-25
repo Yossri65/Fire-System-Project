@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/ECU_Layer/dc_motor/ecu_dc_motor.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/ECU_Layer/ecu_intialize.c</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/MCAL_Layer/EEPROM/mcal_eeprom.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/ECU_Layer/Key_Pad/ecu_key_pad.c</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/MCAL_Layer/GPIO/hal_GPIO.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/MCAL_Layer/MCAL_ADC/mcal_adc.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/MCAL_Layer/Interrupt/mcal_interrupt_gen_cfg.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/ECU_Layer/dc_motor/ecu_dc_motor.c</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/MCAL_Layer/MCAL_ADC/mcal_adc.c</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/ECU_Layer/Ch_LCD/ecu_ch_lcd.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/Application.c</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/Application.h</file>
+            <file>file:/C:/Users/Yossri/Documents/FireSystemProject/Pic18f4620_Driver_Mohamed_Yossri.X-main/ECU_Layer/Key_Pad/ecu_key_pad.h</file>
+        </group>
+    </open-files>
+</project-private>
